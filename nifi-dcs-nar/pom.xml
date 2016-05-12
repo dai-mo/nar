@@ -32,7 +32,7 @@
     <dependencies>
         <dependency>
             <groupId>org.dcs</groupId>
-            <artifactId>nifi-dcs-processors</artifactId>
+            <artifactId>org.dcs.nifi.processors</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

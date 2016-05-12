@@ -38,7 +38,7 @@
         </dependency>
         <dependency>
             <groupId>org.dcs</groupId>
-            <artifactId>nifi-dcs-service</artifactId>
+            <artifactId>org.dcs.nifi.services</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
