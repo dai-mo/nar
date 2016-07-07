@@ -4,7 +4,7 @@
 
 	<groupId>org.dcs</groupId>
 	<artifactId>org.dcs.nar</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>org.dcs.nar</name>
@@ -18,7 +18,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+        <snapshotDependencyAllowed>true</snapshotDependencyAllowed>
+    </properties>
 
 	<build>
 		<plugins>
@@ -28,6 +29,31 @@
 				<version>1.1.0</version>
 				<extensions>true</extensions>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!-- Make sure that only non-snapshot versions are used for the dependencies.
+                             Only active when property 'snapshotDependencyAllowed' is false. -->
+                        <id>enforce-no-snapshots</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${snapshotDependencyAllowed}</skip>
+                            <rules>
+                                <requireReleaseDeps>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseDeps>
+                                <requireReleaseVersion>
+                                    <message>No Snapshots Allowed!</message>
+                                </requireReleaseVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 </project>
