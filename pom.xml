@@ -18,7 +18,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+        <snapshotDependencyAllowed>true</snapshotDependencyAllowed>
+    </properties>
 
 	<build>
 		<plugins>

@@ -27,6 +27,7 @@
     <properties>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <source.skip>true</source.skip>
+        <snapshotDependencyAllowed>true</snapshotDependencyAllowed>
     </properties>
 
     <dependencies>
