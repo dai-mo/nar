@@ -14,6 +14,7 @@
 		<module>nifi-dcs-nar</module>
 		<module>nifi-dcs-service-api-nar</module>
 		<module>nifi-dcs-service-nar</module>
+        <module>nifi-dcs-repo-nar</module>
 	</modules>
 
 	<properties>
