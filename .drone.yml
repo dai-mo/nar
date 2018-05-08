@@ -21,9 +21,9 @@ pipeline:
       - cp settings.xml ~/.m2
       - mvn -Dmaven.repo.local=./.m2 deploy
     secrets: [ artifactory_host, artifactory_url, artifactory_username, artifactory_password ]
-      when:
-        branch: master
-        status: [ success ]
+    when:
+      branch: master
+      status: [ success ]
   rebuild-cache:
     image: drillster/drone-volume-cache
     rebuild: true
