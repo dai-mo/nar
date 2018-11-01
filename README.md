@@ -1,6 +1,9 @@
-# Alambeek Nifi Archive Project
+# Daimo Nifi Bundle Project
+
+This project generates a (Nifi Archive) bundle to be deployed to a [Apache Nifi](https://nifi.apache.org/) containing remote processor service invocation classes as well as data repository implementations.
 
 # License
+
 Copyright (c) 2017-2018 brewlabs SAS
 
 Licensed under the Apache License, Version 2.0 (the "License");
